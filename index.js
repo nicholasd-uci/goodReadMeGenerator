@@ -1,25 +1,63 @@
 
 
-//dependensies
-const fs = require('fs')
-const path = require('path')
-const inquirer = require('inquirer')
-// import your function generator
-
+const { prompt } = require('inquirer')
+const { writeFile } = require('fs')
+const answer = []
 
 //these questions are for inquirer to promt the user for input
-const questions = [
+prompt([
     {
-        type:"input",
-        name:"Title",
-        message:"What would you like Title to be?"  
+        type: 'input',
+        name: 'name',
+        message: 'Tell us your name?'
     },
     {
-        type:"input",
-        name:"Description",
-        message:"What is to be?"
-    }
-]
+        type: 'input',
+        name: 'location',
+        message: 'Where are you from?'
+    },
+    {
+        type: 'input',
+        name: 'bio',
+        message: 'So, tell me a short bio about yourself!:'
+    },
+    {
+        type: 'input',
+        name: 'linkedIn',
+        message: 'Everyone uses LinkedIn! Whats your URL for your LinkedIn Site?:'
+    },
+    {
+        type: 'input',
+        name: 'github',
+        message: 'All coders use Github! Whats your URL for Github?:'
+    },
+])
+    .then(({ name, location, bio, github, linkedIn }) => {
+        writeFile(`README.md`, `
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Document</title>
+        </head>
+        <body>
+            <h1>Your name is ${answer.name}!</h1>
+            <h2>So you are from ${answer.location}, nice!</h2>
+            <p>Here you can find your bio about your self --> ${answer.bio}</p>
+            
+            <a href="${linkedIn}">LinkedIn</a>
+            <a href="${github}">Github</a>
+            Cool, your github url is ${answer.gitHub}!
+            Cool, your LinkedIn url is ${answer.linkedIn}!
+        </body>
+        </html>
+    `, err => {
+        if (err) { console.log(err) }
+        console.log('Portfolio Page Created!')
+        })
+    })
+    .catch(err => console.log(err))
 
 
 
