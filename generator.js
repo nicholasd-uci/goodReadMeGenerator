@@ -5,14 +5,7 @@ const { fstat } = require("fs");
 
 // function to generate markdown for README
 function generateMarkdown(data) {
-    return `
-    #   ${data.name}
-    **  ${data.location}
-    #   ${data.bio}
-    #   ${data.linkedIn}
-    #   ${data.github}
-
-  `;
+    return ``;
   }
   
   module.exports = generateMarkdown;

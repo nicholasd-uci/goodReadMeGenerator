@@ -1,30 +1,62 @@
-
+// NOTE**       PLEASE BE AWARE!!! 
+// I worked on this with a group in my class. -->  This is all my own questions and formatting of my own temp literal. //
+// NOTE**       PLEASE BE AWARE
 
 const { prompt } = require('inquirer')
 const { writeFile } = require('fs')
-const answer = []
+// const answer = []
 
 //these questions are for inquirer to promt the user for input
 prompt([
     {
         type: 'input',
-        name: 'name',
-        message: 'Tell us your name?'
+        name: 'Title',
+        message: 'What is the Title of your prject?'
     },
     {
         type: 'input',
-        name: 'location',
-        message: 'Where are you from?'
+        name: 'Description',
+        message: 'Tell us about your project.'
     },
     {
         type: 'input',
-        name: 'bio',
-        message: 'So, tell me a short bio about yourself!:'
+        name: 'Contents',
+        message: 'Place any Table of Content Here:'
+    },
+    {
+        type: 'input',
+        name: 'Installation',
+        message: 'What are the Install steps. Include npm links if need be.'
+    },
+    {
+        type: 'input',
+        name: 'Usage',
+        message: 'What is the usage for your app?'
+    },
+    {
+        type: 'input',
+        name: 'License',
+        message: 'Which license will you need?'
+    },
+    {
+        type: 'input',
+        name: 'Contributing',
+        message: 'Who is working on this file?'
+    },
+    {
+        type: 'input',
+        name: 'Test',
+        message: 'What test have you ran?'
+    },
+    {
+        type: 'input',
+        name: 'Questions',
+        message: 'What is a good email address for you?'
     },
     {
         type: 'input',
         name: 'linkedIn',
-        message: 'Everyone uses LinkedIn! Whats your URL for your LinkedIn Site?:'
+        message: 'What is your LinkedIn account URL just in case employers want to contact you?:'
     },
     {
         type: 'input',
@@ -32,24 +64,53 @@ prompt([
         message: 'All coders use Github! Whats your URL for Github?:'
     },
 ])
-    .then(({ name, location, bio, github, linkedIn }) => {
+    .then(({ Title, Description, Contents, Installation, Usage, License, Contributing, Test, Questions, github, linkedIn }) => {
         writeFile(`README.md`, `
-        <!DOCTYPE html>
-        <html lang="en">
-        <head>
-            <meta charset="UTF-8">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <title>Document</title>
-        </head>
-        <body>
-            <h1>Awesome your name is ${name}!</h1>
-            <h2>Cool, your are from ${location}!</h2>
-            <p>Awesome, you will need this information later: ${bio}</p>
-            <a href="${linkedIn}">Cool, we got your LinkedIn account!</a>
-            <a href="${github}">Awesome, and we can add to the list, your Github account!</a>
+
+            Project Title: ${Title}
+
+            Description
+            ___________________________
+
+            ${Description}
+
+            Table of Contents
+            ___________________________
+
+            ${Contents}
+
+            Installation Instructions
+            ___________________________
+
+            ${Installation}
+
+            Usage - How to use
+            ___________________________
+
+            ${Usage}
+
+            License used in application
+            ___________________________
+
+            ${License}
+
+            Contributing work here
+            ___________________________
+
+            ${Contributing}
+
+            Test File work here
+            ___________________________
+
+            ${Test}
+
+
+            Please feel free to reach out to me via:
+            ________________________________________
+            Email: ${Questions}
+            LinkedIn Account                         ${linkedIn}
+            Github Account                           ${github}
             
-        </body>
-        </html>
     `, err => {
         if (err) { console.log(err) }
         console.log('Portfolio Page Created!')
