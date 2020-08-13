@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 
             Project Title: README Project! 
 
@@ -46,6 +45,3 @@
             Github Account                           https://github.com/nicholasd-uci
             
     
-=======
-    
->>>>>>> d468823be9a044998a632916145ecf9079fdd9a1
