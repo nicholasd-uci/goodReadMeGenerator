@@ -36,7 +36,7 @@ prompt([
     {
         type: 'input',
         name: 'License',
-        message: 'Which license will you need?'
+        message: 'Which license will you need? "MIT", "APACHE 2.0", "GPL 3.0", "BSD 3", "None"'
     },
     {
         type: 'input',
@@ -66,6 +66,8 @@ prompt([
 ])
     .then(({ Title, Description, Contents, Installation, Usage, License, Contributing, Test, Questions, github, linkedIn }) => {
         writeFile(`README.md`, `
+
+        ${License} [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0) 
 
             Project Title: ${Title}
 
