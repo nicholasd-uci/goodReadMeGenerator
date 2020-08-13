@@ -42,9 +42,9 @@ prompt([
             <title>Document</title>
         </head>
         <body>
-            <h1>Awesome your name is ${answer.name}!</h1>
-            <h2>Cool, your are from ${answer.location}!</h2>
-            <p>Awesome, you will need this information later: ${answer.bio}</p>
+            <h1>Awesome your name is ${name}!</h1>
+            <h2>Cool, your are from ${location}!</h2>
+            <p>Awesome, you will need this information later: ${bio}</p>
             <a href="${linkedIn}">Cool, we got your LinkedIn account!</a>
             <a href="${github}">Awesome, and we can add tot he list, your Github account!</a>
             
