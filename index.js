@@ -46,7 +46,7 @@ prompt([
             <h2>Cool, your are from ${location}!</h2>
             <p>Awesome, you will need this information later: ${bio}</p>
             <a href="${linkedIn}">Cool, we got your LinkedIn account!</a>
-            <a href="${github}">Awesome, and we can add tot he list, your Github account!</a>
+            <a href="${github}">Awesome, and we can add to the list, your Github account!</a>
             
         </body>
         </html>
