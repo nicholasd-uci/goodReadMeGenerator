@@ -2,7 +2,10 @@
 
 ## About
 ```
-Every developer needs a good README.md file. In this repository, we learn how to generate a README file that generator's users' information into a neatly placed README file. Consisting of title, description, installation, usage, license, contributing, testing, email, and Github.
+Every developer needs a good README.md file. 
+In this repository, we learn how to generate a README file. 
+It then generator's users' information into a neatly placed README file. 
+Consisting of title, description, installation, usage, license, contributing, testing, email, and Github.
 ```
 
 ## Prompting the user
