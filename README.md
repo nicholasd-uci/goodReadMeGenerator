@@ -10,19 +10,26 @@ Consisting of title, description, installation, usage, license, contributing, te
 
 ## Prompting the user
 
-> We first bring in prompt with inquirer 
+*** Please be aware to check index.js for further understanding ***
+
+> We first need to bring in prompt with inquirer 
 
 ![promptInquirer](./photos/promptInquirer.png)
 
-> We then use prompt are able to render questions the user
+> We also need to bring in fs.writeFile
+
+![writeFile](./photos/writeFile.png)
+
+> We use the "prompt" method in order to render questions to the user
 
 ![prompt](./photos/prompt.png)
 
-## Results 
 
+# Final Results
 
-# Reference Source 
+> Once you have ran all the question and the file is generated it should look like this!
 
+![results]()
 
 
 ## LINKS
