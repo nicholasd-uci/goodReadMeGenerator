@@ -51,60 +51,59 @@ prompt([
 ])
     .then(({ title, description, installation, usage, license, contributing, testing, email, github }) => {
         writeFile('sampleREADME.md', 
-        ` 
-            # ${title}
-            ![badge](https://img.shields.io/badge/license-${license}-blue.svg) 
+        `
+# ${title}
+
+![badge](https://img.shields.io/badge/license-${license}-blue.svg) 
         
-            - - - 
+ - - - 
 
-            # Table of Contents
+# Table of Contents
 
-            Project Title: ${title}
+Project Title: ${title}
 
-            - [Description](#description)
-            - [Installation](#installation)
-            - [Usage](#usage)
-            - [License](#license)
-            - [Contributing](#contributing)
-            - [Testing](#testing)
-            - [ContactUs](#contactus)
-
-
-            ## Description:
-
-            ${description}
+- [Description](#description)
+- [Installation](#installation)
+- [Usage](#usage)
+- [License](#license)
+- [Contributing](#contributing)
+- [Testing](#testing)
+- [ContactUs](#contactus)
 
 
-            ## Installation:
+## Description:
+
+${description}
+
+## Installation:
             
-            ${installation}
+${installation}
 
-            ## Usage - Windows 10:
+## Usage - Windows 10:
             
-            ${usage}
+${usage}
 
-            ## License:
+## License:
 
-            ${license}
+${license}
 
-            ## Contributing work here
+## Contributing work here
 
-            ${contributing}
+${contributing}
 
-            ## Test File work here
+## Test File work here
 
-            ***Completed Testing***
-            ${testing}
+***Completed Testing***
+${testing}
 
-            ## Contact Us
+## Contact Us
 
-            Via Email at: [${title}](mailto:${email})
-            Via GitHub at: [${github}](https://github.com/${github})
+Via Email at: [${title}](mailto:${email})
+Via GitHub at: [${github}](https://github.com/${github})
 
-            - - -
-            © 2020 ${title}
-            
-        `, err => {
+- - -
+© 2020 ${title}
+`, err => {
             if (err) { console.log(err) }
             console.log('README Sample Created!')
             })

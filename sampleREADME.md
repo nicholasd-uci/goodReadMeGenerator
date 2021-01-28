@@ -1,54 +1,52 @@
- 
-            # jscholarme
-            ![badge](https://img.shields.io/badge/license-MIT-blue.svg) 
+
+# jScholarMe
+
+![badge](https://img.shields.io/badge/license-MIT-blue.svg) 
         
-            - - - 
+ - - - 
 
-            # Table of Contents
+# Table of Contents
 
-            Project Title: jscholarme
+Project Title: jScholarMe
 
-            - [Description](#description)
-            - [Installation](#installation)
-            - [Usage](#usage)
-            - [License](#license)
-            - [Contributing](#contributing)
-            - [Testing](#testing)
-            - [ContactUs](#contactus)
-
-
-            ## Description:
-
-            social media app
+- [Description](#description)
+- [Installation](#installation)
+- [Usage](#usage)
+- [License](#license)
+- [Contributing](#contributing)
+- [Testing](#testing)
+- [ContactUs](#contactus)
 
 
-            ## Installation:
+## Description:
+
+It is a social media app for college students
+
+## Installation:
             
-            npm i
+basic npm packages that need to be installed
 
-            ## Usage - Windows 10:
+## Usage - Windows 10:
             
-            college students
+for any type of college lab courses
 
-            ## License:
+## License:
 
-            MIT
+MIT
 
-            ## Contributing work here
+## Contributing work here
 
-            na
+NA - further review for consideration is pending status
 
-            ## Test File work here
+## Test File work here
 
-            ***Completed Testing***
-            na
+***Completed Testing***
+4.01.02
 
-            ## Contact Us
+## Contact Us
 
-            Via Email at: [jscholarme](mailto:nicholas.dallas)
-            Via GitHub at: [nicholasd-uci](https://github.com/nicholasd-uci)
+Via Email at: [jScholarMe](mailto:nicholas.dallas0@gmail.com)
+Via GitHub at: [nicholasd-uci](https://github.com/nicholasd-uci)
 
-            - - -
-            © 2020 jscholarme
-            
-        
+- - -
+© 2020 jScholarMe
