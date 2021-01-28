@@ -29,7 +29,7 @@ Consisting of title, description, installation, usage, license, contributing, te
 
 > Once you have ran all the question and the file is generated it should look like this!
 
-![results]()
+![results](./photos/results.png)
 
 
 ## LINKS
