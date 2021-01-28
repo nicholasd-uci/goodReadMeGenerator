@@ -4,61 +4,62 @@ const { writeFile } = require('fs')
 prompt([
     {
         type: 'input',
-        name: 'Title',
+        name: 'title',
         message: 'What is the Title of your project?'
     },
     {
         type: 'input',
-        name: 'Description',
+        name: 'description',
         message: 'Tell us about your project...'
     },
     {
         type: 'input',
-        name: 'Installation',
+        name: 'installation',
         message: 'What are the Installation steps?'
     },
     {
         type: 'input',
-        name: 'Usage',
+        name: 'usage',
         message: 'How would a user use your project?'
     },
     {
         type: 'list',
-        name: 'License',
+        name: 'license',
         message: 'Choose your License type.',
         choices: ['MIT', 'APACHE_2.0', 'GPL_3.0', 'BSD_3', 'None']
     },
     {
         type: 'input',
-        name: 'Contributing',
+        name: 'contributing',
         message: 'Who Contributed to this project?'
     },
     {
         type: 'input',
-        name: 'Testing',
+        name: 'testing',
         message: 'What Final or Beta Testing have you done?'
     },
     {
         type: 'input',
-        name: 'Email',
+        name: 'email',
         message: 'Type your Email address:'
     },
     {
         type: 'input',
-        name: 'Github',
+        name: 'github',
         message: 'All coders use Github! Whats your URL for Github?:'
     },
 ])
-    .then(({ Title, Description, Installation, Usage, License, Contributing, Testing, Email, Github }) => {
+    .then(({ title, description, installation, usage, license, contributing, testing, email, github }) => {
         writeFile(`sampleREADME.md`, 
         ` 
-            ![badge](https://img.shields.io/badge/license-${License}-blue.svg) 
+            # ${title}
+            ![badge](https://img.shields.io/badge/license-${license}-blue.svg) 
         
             - - - 
 
             # Table of Contents
 
-            Project Title: ${Title}
+            Project Title: ${title}
 
             - [Description](#description)
             - [Installation](#installation)
@@ -71,34 +72,34 @@ prompt([
 
             ## Description:
 
-            ${Description}
+            ${description}
 
 
             ## Installation:
             
-            ${Installation}
+            ${installation}
 
             ## Usage - Windows 10:
             
-            ${Usage}
+            ${usage}
 
             ## License:
 
-            ${License}
+            ${license}
 
             ## Contributing work here
 
-            ${Contributing}
+            ${contributing}
 
             ## Test File work here
 
             ***Completed Testing***
-            ${Testing}
+            ${testing}
 
             ## Contact Us
 
-            Via Email at:[${Title}](mailto:${Email})
-            Via GitHub at:[${Github}](https://github.com/${Github})
+            Via Email at: [${title}](mailto:${email})
+            Via GitHub at: [${github}](https://github.com/${github})
 
             - - -
             © 2020 ${Title}
