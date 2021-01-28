@@ -1,118 +1,112 @@
-// NOTE**       PLEASE BE AWARE!!! 
-// I worked on this with a group in my class. -->  This is all my own questions and formatting of my own temp literal. //
-// NOTE**       PLEASE BE AWARE
-
 const { prompt } = require('inquirer')
 const { writeFile } = require('fs')
-// const answer = []
 
-//these questions are for inquirer to promt the user for input
 prompt([
     {
         type: 'input',
         name: 'Title',
-        message: 'What is the Title of your prject?'
+        message: 'What is the Title of your project?'
     },
     {
         type: 'input',
         name: 'Description',
-        message: 'Tell us about your project.'
-    },
-    {
-        type: 'input',
-        name: 'Contents',
-        message: 'Place any Table of Content Here:'
+        message: 'Tell us about your project...'
     },
     {
         type: 'input',
         name: 'Installation',
-        message: 'What are the Install steps. Include npm links if need be.'
+        message: 'What are the Installation steps?'
     },
     {
         type: 'input',
         name: 'Usage',
-        message: 'What is the usage for your app?'
+        message: 'How would a user use your project?'
     },
     {
         type: 'input',
         name: 'License',
-        message: 'Which license will you need? "MIT", "APACHE 2.0", "GPL 3.0", "BSD 3", "None"'
+        message: 'Which License will you need? "MIT"',
+        choices: ['MIT', 'APACHE_2.0', 'GPL_3.0', 'BSD_3', 'None']
     },
     {
         type: 'input',
         name: 'Contributing',
-        message: 'Who is working on this file?'
+        message: 'Who Contributed to this project?'
     },
     {
         type: 'input',
-        name: 'Test',
-        message: 'What test have you ran?'
+        name: 'Testing',
+        message: 'What Final or Beta Testing have you done?'
     },
     {
         type: 'input',
-        name: 'Questions',
-        message: 'What is a good email address for you?'
+        name: 'Email',
+        message: 'Type your Email address:'
     },
     {
         type: 'input',
-        name: 'linkedIn',
-        message: 'What is your LinkedIn account URL just in case employers want to contact you?:'
+        name: 'LinkedIn',
+        message: 'Type your LinkedIn account:'
     },
     {
         type: 'input',
-        name: 'github',
+        name: 'Github',
         message: 'All coders use Github! Whats your URL for Github?:'
     },
 ])
-    .then(({ Title, Description, Contents, Installation, Usage, License, Contributing, Test, Questions, github, linkedIn }) => {
-        writeFile(`README.md`, `
-
-        ${License} [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0) 
+    .then(({ Title, Description, Installation, Usage, License, Contributing, Testing, Email, Github, LinkedIn }) => {
+        writeFile(`sampleREADME.md`, ` # ${res.Title}
+            ![badge](https://img.shields.io/badge/license-${res.License}-blue.svg) 
         
+            - - - 
+
+            # Table of Contents
 
             Project Title: ${Title}
 
-            Description
-            ___________________________
+            - [Description](#description)
+            - [Installation](#installation)
+            - [Usage](#usage)
+            - [License](#license)
+            - [Contributing](#contributing)
+            - [Testing](#testing)
+            - [ContactUs](#contactus)
+
+
+            ## Description:
 
             ${Description}
 
-            Table of Contents
-            ___________________________
 
-            ${Contents}
-
-            Installation Instructions
-            ___________________________
-
+            ## Installation:
+            
             ${Installation}
 
-            Usage - How to use
-            ___________________________
-
+            ## Usage - Windows 10:
+            
             ${Usage}
 
-            License used in application
-            ___________________________
+            ## License:
 
             ${License}
 
-            Contributing work here
-            ___________________________
+            ## Contributing work here
 
             ${Contributing}
 
-            Test File work here
-            ___________________________
+            ## Test File work here
 
-            ${Test}
+            ***Completed Testing***
+            ${Testing}
 
+            ## Contact Us
 
-            Please feel free to reach out to me via:
-            ________________________________________
-            Email: ${Questions}
-            LinkedIn Account                         ${linkedIn}
-            Github Account                           ${github}
+            [Via Email at](mailto:${Email})
+            [Via LinkedIn at] ${LinkedIn}
+            [Via GitHub at]  ${Github}
+
+            - - -
+            © 2020 ${Title}
             
     `, err => {
         if (err) { console.log(err) }
