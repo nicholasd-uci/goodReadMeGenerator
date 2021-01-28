@@ -23,9 +23,9 @@ prompt([
         message: 'How would a user use your project?'
     },
     {
-        type: 'input',
+        type: 'list',
         name: 'License',
-        message: 'Which License will you need? "MIT"',
+        message: 'Choose your License type.',
         choices: ['MIT', 'APACHE_2.0', 'GPL_3.0', 'BSD_3', 'None']
     },
     {
