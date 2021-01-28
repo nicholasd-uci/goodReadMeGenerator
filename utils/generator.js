@@ -1,5 +1,5 @@
 function generateMarkdown(data) {
-    return `# ${data.Title}`;
+    return `# ${Title}`;
   }
   
   module.exports = generateMarkdown;

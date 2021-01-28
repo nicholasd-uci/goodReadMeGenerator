@@ -45,18 +45,14 @@ prompt([
     },
     {
         type: 'input',
-        name: 'LinkedIn',
-        message: 'Type your LinkedIn account:'
-    },
-    {
-        type: 'input',
         name: 'Github',
         message: 'All coders use Github! Whats your URL for Github?:'
     },
 ])
-    .then(({ Title, Description, Installation, Usage, License, Contributing, Testing, Email, Github, LinkedIn }) => {
-        writeFile(`sampleREADME.md`, ` # ${res.Title}
-            ![badge](https://img.shields.io/badge/license-${res.License}-blue.svg) 
+    .then(({ Title, Description, Installation, Usage, License, Contributing, Testing, Email, Github }) => {
+        writeFile(`sampleREADME.md`, 
+        ` 
+            ![badge](https://img.shields.io/badge/license-${License}-blue.svg) 
         
             - - - 
 
@@ -101,43 +97,16 @@ prompt([
 
             ## Contact Us
 
-            [Via Email at](mailto:${Email})
-            [Via LinkedIn at] ${LinkedIn}
-            [Via GitHub at]  ${Github}
+            Via Email at:[${Title}](mailto:${Email})
+            Via GitHub at:[${Github}](https://github.com/${Github})
 
             - - -
             © 2020 ${Title}
             
-    `, err => {
-        if (err) { console.log(err) }
-        console.log('Portfolio Page Created!')
-        })
+        `, err => {
+            if (err) { console.log(err) }
+            console.log('README Sample Created!')
+            })
     })
     .catch(err => console.log(err))
 
-
-
-
-
-
-
-
-
-//  This way was taught to me by my tutor. I could not figure it out however, I wanted to keep it to make sure that I could reference it one day // I have been recommended TO NOT USE THIS due to its difficulty. 
-
-//function to create readme and write this readme file 
-// function writeToFile(fileName, data) {
-//     return fs.writeFileSync(path.append(process.cwd(), fileName), data);
-// }
-
-
-//start the node application and handles other functions
-// function start() {
-//     inquirer.prompt(questions)
-//     .then((inquirerResponses)=> {
-//         writeToFile("README.md", generator({...inquirerResponses}))
-//     })
-//     .catch(err => console.log(err))
-// }
-
-// start()
