@@ -46,6 +46,7 @@ NA - further review for consideration is pending status
 ## Contact Us
 
 Via Email at: [jScholarMe](mailto:nicholas.dallas0@gmail.com)
+
 Via GitHub at: [nicholasd-uci](https://github.com/nicholasd-uci)
 
 - - -

@@ -99,6 +99,7 @@ ${testing}
 ## Contact Us
 
 Via Email at: [${title}](mailto:${email})
+
 Via GitHub at: [${github}](https://github.com/${github})
 
 - - -
