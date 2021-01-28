@@ -7,6 +7,13 @@ Every developer needs a good README.md file. In this repository, we learn how to
 
 ## Prompting the user
 
+> We first bring in prompt with inquirer 
+
+![promptInquirer](./photos/promptInquirer.png)
+
+> We then use prompt are able to render questions the user
+
+![prompt](./photos/prompt.png)
 
 ## Results 
 
