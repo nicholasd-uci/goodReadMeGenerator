@@ -50,7 +50,7 @@ prompt([
     },
 ])
     .then(({ title, description, installation, usage, license, contributing, testing, email, github }) => {
-        writeFile(`sampleREADME.md`, 
+        writeFile('sampleREADME.md', 
         ` 
             # ${title}
             ![badge](https://img.shields.io/badge/license-${license}-blue.svg) 
@@ -102,7 +102,7 @@ prompt([
             Via GitHub at: [${github}](https://github.com/${github})
 
             - - -
-            © 2020 ${Title}
+            © 2020 ${title}
             
         `, err => {
             if (err) { console.log(err) }
